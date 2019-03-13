@@ -1,0 +1,48 @@
+css属性与HTML属性操作
+
+style属性------给节点设置或获取样式 只能获取或设置行内样式；只能设置一个
+	语法格式：节点.style.样式名=样式值；  样式名必须是驼峰写法；
+
+cssText 一次设置多个样式		只能获取或设置行内样式；
+	语法格式：节点.style.cssText="样式名1：样式值；.........."
+
+className属性 给节点设置或获取类名
+	节点.className="类名"
+
+classList属性 增加 删除 查找类名
+
+
+	节点.classList.add（增加的类名1，增加的类名2，............）；
+	节点.classList.remove（删除项目1，删除项目2，............）；
+	节点.classList.contains（查找的name）；---返回值为boolean；
+
+	节点.classList.item（下标值）；返回下标值对应的类名；
+
+
+操作属性：
+
+
+	getAttribute()获取属性
+		语法结构
+		节点.getAttribute(要获取的属性名）；返回值为相应的属性值；
+
+	setAttribute()设置属性
+		语法结构
+		节点.setAttribute（要设置的属性名，要设置的属性值）；
+
+	removeAtteribute（）删除属性
+		语法结构
+		节点.removeAttribute（要删除的属性）；
+
+		
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*

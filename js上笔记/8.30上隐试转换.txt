@@ -1,0 +1,131 @@
+number string boolean null undefined
+[1]	各种类型转数值：
+	1)Number() 强行转化函数 可以将任意类型任意转换
+		console.log(Number(true));1
+		console.log(Number(false));0
+		console.log(Number("abc"));NaN
+		console.log(Number("5"));5
+		console.log(Number("123ab"));NaN
+		console.log(Number("")); 0
+		console.log(Number(" "));0  (空格)
+		console.log(Number(null));0
+		console.log(Number(undefined));固定转换为NaN
+	2）parseInt()  将字符串转为整型
+		会忽略前置空格，从第一个非空格字符开始往后查找 直到找到第一个非数值字符停止并返回该数值前的内容
+		忽略前置空格，如果第一个非空格字符就是非数值则返回NaN
+		console.log(parseInt("3.14"));3
+		console.log(parseInt("      45.56"));45
+		console.log(parseInt("    w123"));NaN
+		console.log(parseInt("100",2));4
+	3）parseFloat() 将字符串转为小数；
+		console.log(parseFloat("12.34"));12.34
+		console.log(parseFloat("12.34.56"));12.34
+		console.log(parseFloat("12.3a4"));12.3
+		console.log(parseFloat("a12.34"));NaN
+		console.log(parseFloat(""));NaN
+	4)+
+		console.log(+"5");5
+		console.log("5"*1);5
+		任何涉及到NaN的操作都返回NaN，NaN不等于任何数值console.log
+		js规定：
+			console.log(undefined==null);true
+			console.log(undefined===null);false
+	隐试转换  后台调用Number（）的方法
+	- * / % <   >   >=  <=  isNaN()  !=   ==
+
+[2]	各类型转换字符串
+	1）String（） 强行转为函数 可以将各类型字符转为字符串
+		console.log(String(true));'true'
+		console.log(String(123));'123'
+		console.log(String(null));'null'
+		console.log(String(undefined));'undefined'
+		console.log(tyoeof String(fn));String
+		function fn(){}
+	2)*.toString() 可以将除了null和undefined以外的所有类型转为字符串（常数必须是变量）
+		console.log(3.toString());报错
+		var a=3;
+		console.log(a.toString());3
+		var a=null;
+		console.log(a.toString());报错
+	字符串下标
+		var str='ASDFG';字符串收个字符下标为0   A=0,S=1，D=2，F=3;
+		console.log(str[3]);F
+		console.log(str.lengh);5   字符串的个数ASDFG四个字符；
+		console.log(str[str.lengh-1]);'G'
+
+
+[3]	各类型转布尔：
+	Boolean() 强行转换函数  可以将任意类型转为boolean
+		console.log(Boolean(123));true
+		console.log(Boolean(-3.14)):true
+		console.log(Boolean(NaN));false
+		console.log(Boolean(0));false
+
+		
+		
+		console.log(Boolean('123'));true
+		console.log(Boolean(''));false
+		console.log(Boolean(' '));true
+
+		Number    除了NaN和0以外的所有数都是true    NaN和0是false
+		String    除了空串以外的所有字符串都是true   空字符串是false
+		undefined    无 				    undefined为false
+		
+		对象（object）除了null以外的所有对象都是true  null是false
+
+	表达式的概念：
+		按照特定的规则 由运算符和操作数组成的式子
+	运算符的分类：
+	按照操作数个数分类：
+	一元运算符：++ -- + - ！
+	二元运算符：* / % > < == !=
+	三元运算符：条件运算符  条件1？条件2：条件3
+
+	运算符的优先级：
+	() []  大于  ++  -- ！ （+ - 转数值） 大于 * / % 大于< >  >=  <= 大于 （+ - 运算拼接）大于 $$ ||
+	
+	加性运算符  + -
+		+号作用  1）运算  2）拼接
+		-号作用
+	乘性运算符 * / %
+	关系运算符 > <  <=  >=  返回值：boolean类型
+
+	相等和不相等运算符 ==  ！= ===  ！==
+		相等和不相等 == ！=
+			console.log("2"==2);true
+			console.log(NaN=="NaN");false
+			console.log(''!=0);false
+		全等和不全等  === ！==  不会进行隐试转换  先比较类型是否一致 自取比较值是否相等
+			console.log（“20”===20）；false
+			console.log("asd"==="fgh");false
+			
+	逻辑运算符 ！大于 $$ 大于 ||
+		！-------逻辑非 返回值为boolean  非真即假  非假即真 
+		$$-------逻辑与
+			1）找假（false）当表达式中，有假时，返回第一个为假的值
+			2）如果表达式中全部为真，则返回最后一个为真的值
+		||-------逻辑或
+			1）找真 当表达式中，有真时，返回第一个为真的值
+			2）如果表达式中全部为假，则返回最后一个为假的值
+				
+	
+	初等运算符（）[]     优先级最高的运算符
+	逗号运算符 ，	    优先级最低的运算符  默认取得是最后一个值
+	赋值运算符 =	    运算顺序从右到左，左便必须只能是变量（string）
+	复合赋值运算符  += -= *= /= %=
+		运算顺序从右到左
+		例如：var  a=2
+			a+=4	同等于a=a+4 同等于 a=2+4
+			a*=4    同等于a=a*4 同等于 a=2*4
+	条件运算符 ？：
+		条件1？ 条件2:条件3
+		var max=5>3?1:0   5大于3成立吗？
+		console.log(max);	成立输出1
+
+*
+*
+*
+*
+*
+*
+*	

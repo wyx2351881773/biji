@@ -1,0 +1,115 @@
+
+-------------------------------------------------------------7  文字属性、段落属性、背景属性、列表属性--------------------------------
+
+属性值单位：像素(px),一个汉字(em),百分之多少(%)
+
+1、文字属性： 
+
+颜色   color  （值：英文关键字red   green  blue  yellow   十六进制色号：#f00   #ff0000   #fff   #000   #f0f  #333）  （例：color:#F00;）
+字号(文字大小)   font-size（值：24px   2em   50%  4rem）   (例：font-size:14px;)
+字体   font-family（值：“微软雅黑”,   “黑体” , “宋体”, “隶书”）优先使用第一个，每个字体之间用逗号隔开，双引号可有可无,也可以是单引号
+文字加粗   font-weight（值：bold加粗、normal正常、100-500正常、600-900加粗、bolder更粗、lighter更细）
+文字风格   font-style（italic斜体、oblique倾斜的字、 normal正常）
+
+复合属性：font
+
+2、段落属性：
+ 
+行高(行距)  line-height（值：2em  百分比   24px  4rem）（可以做单行文字垂直居中line-height等于height）
+首行缩进  text-indent（值：2em  百分比   24px  -24px(悬挂缩进)）
+水平对齐方式   text-align（值：left(默认值)、center、right、justify（两端对齐））
+文本修饰   text-decoration（值：underline(下划线)、overline(上划线)、line-through(删除线)、none(无)）
+
+3、背景属性：
+
+背景复合属性：background
+
+background: #eef4ed url(../images/bg.jpg) no-repeat center top  (背景图片 不重复 水平居中 垂直居上 背景颜色#eef4ed)
+
+背景颜色：background-color    ( background-color:#f00)
+
+背景图：background-image  ( background-image:url(../images/a.jpg) )
+
+背	：background-repeat  （background-repeat:no-repeat ）（值：repeat双向重复(默认值)、no-repeat不重复、repeat-x横向重复。repeat-y纵向重复）
+
+背景位置(背景定位)：background-position  ( background-position:left bottom )（值：先水平后垂直，居中都是center,可以用数字带单位，当用数字的时候必须写两个值）
+
+注意：背景的位置有五个方向：left right top bottom center（位置可以是数字带单位）
+
+背景附件：background-attachment  ( background-attachment:fixed )（值：fixed固定背景图、scroll滚动<默认值>）
+
+
+
+4、列表属性：
+
+项目符号自定义图像  list-style-image  (list-style-images:url(路径))
+
+项目符号的位置： list-style-position （list-style-position:inside）（值：inside在里边、outside在外边<默认值>）
+
+项目符号的类型：list-style-type  (list-style-type:circle)（值：disc实心圆(默认值)、circle空心圆、square正方形、none无）
+
+
+复合属性 list-style(列表样式)
+
+
+
+去掉项目符号两种方法：list-style-type:none
+                      list-style:none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

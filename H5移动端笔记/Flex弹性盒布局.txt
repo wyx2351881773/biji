@@ -1,0 +1,38 @@
+flex 弹性盒布局
+	
+	在父元素身上开辟一个有弹性的盒子
+
+		display:flex 
+			开启弹性盒之后子元素在同一排显示不会溢出换行，
+			同时弹性盒float  clear   vertical-align 失效；
+	
+	可以添加到父元素身上的属性
+	
+		flex-direction:column;  改变布局的方向；横向 row/竖向 column；
+		
+		flex-wrap:wrap; 	是否换行  no-wrap/wrap  
+		
+		jusitify-content:       水平居中  以 布局方向为准;
+			flex-start	左对齐  （默认）
+			flex-end	右对齐
+			center		居中
+			space-between	两端对齐
+			space-around	每个子元素平均对齐
+
+		align-items:            垂直居中  以 布局方向为准;
+			flex-start   	与交叉轴的起点对齐
+			flex-end	与交叉轴的终点对齐
+			center		与交叉轴的中点对齐
+			space-between	与交叉轴两端对齐间隔平均分配
+			space-around	平均分配 两端的大小为 中间 间距的一半；
+	
+		align-content   把所有元素看做一个整体 然后居中
+
+
+	可以添加到子元素身上的元素
+
+		flex-grow:1; 		自动铺满剩余空间;
+
+		order:1;		给指定的元素添加排序  数字越小越靠前
+		
+		

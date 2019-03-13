@@ -1,0 +1,106 @@
+//Promise 异步执行
+
+	主要功能
+		1）简化异步操作
+		2）避免回调函数深层嵌套
+
+			new Promise(function(resolve,reject){
+				if(true){
+					resolve("成功")
+				}else{
+					reject("失败")
+				}
+			}).then(function(value){
+				//then 第一个参数 接收resolve成功的参数
+				console.log(value)
+
+				xxx//错误代码段
+
+			},function(value){
+				//then 第二个参数 接收reject失败的参数
+				console.log(value)
+
+			}).catch(function(value){
+				//then 第二个参数的别名 不仅可以接受reject失败的参数还可以接收上一个then链式调用的代码错误，有点不会阻止代码执行；
+				console.log(value)//抛出 错误代码段 xxx
+
+			}).finally(function(){
+				//不管以上代码是否正确与否都执行此区域的代码块；
+				console.log("正在执行时")
+			})
+
+
+		//执行结果
+
+			成功
+
+			ReferenceError: xxx is not defined
+    at index.html:166
+
+			正在执行时
+
+
+//Promise 简写
+		只需要成功
+		Promise.resolve(）=== new Promise(function(resolve,reject){ resolve()})
+		只需要失败
+		Promise.reject()=== new Promise(function(resolve,reject){ reject()})
+
+		
+		const data=Promise.resolve(success);
+		data.then(function(data){console.log(data)})
+
+		
+
+
+//Promise  类似逻辑与 &&
+		
+			function por1() {
+				return new Promise(function (resolve, reject) {
+					resolve("por1")
+				})
+			}
+			function por2() {
+				return new Promise(function (resolve, reject) {
+					resolve("por2")
+				})
+			}
+
+			function por3() {
+				return new Promise(function (resolve, reject) {
+					resolve("por3")
+				})
+			}
+
+			//判断por1,por2,por3 三个函数的成功失败并抛出信息
+
+			const p=Promise.all([por1(),por2(),por3()]);
+			
+			p.then(function(val){
+				//当成功抛出all所包含的所有成功信息
+				console.log(val)
+			}).catch(function(vs){
+				//当失败抛出all所包含失败的第一条错误信息
+				console.log(vs)
+			})
+
+		
+		
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+
+		

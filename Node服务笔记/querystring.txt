@@ -1,0 +1,6 @@
+const querystring=require("querystring");
+	
+querystring.parse(); 转对象  	   如果数据内存在相同 健名则 健值共同存放到一个数组内；
+querystring.stringfiy();转字符串
+querystring.escape();进行编码
+querystring.unescape();进行解码

@@ -1,0 +1,51 @@
+Canvas 是HTML5中新出的一元素，开发者通过JS脚本语言动态绘制图像；
+	1）画布的意思
+	2）是个标签
+	
+	使用注意事项
+		1）第一步新建画布<canvas></canvas>
+		2）使用行内样式；属性直接书写在标签内，宽高不附带单位直接填写大小Number
+		3）2D/3D    对象=元素.getContext("2d"）只有一个参数
+		4）先定义属性在定义位置；
+		5）点 线 面
+		    1 点 
+			对象.moveTo(0,0) 左上角   起始点 移动点
+			对象.strokeStyle=""red"
+			对象.lineWidth=10;
+			对象.lineTo(200,200);
+			对象.lineTo(0,0);
+			对象.stroke() 	绘制，描边
+			对象.fill()	内填充
+
+		    2.面
+			对象.beginPath();
+			对象.rect(X,Y,W,H);	矩形
+			对象.fillStyle="yellow;	内填充颜色
+			对象.stroke();
+			对象.fill()		填充
+
+		    3.圆
+			对象.beginPath（）	开始新路径
+			对象.arc(X,Y,R,0,360*Math.PI）;圆
+			对象.ctx.closePase()	闭合路径
+			
+		
+		5)清空画布 
+			对象.cleaRect(0,0,500,500)
+		
+			
+			
+			
+
+
+
+
+*
+*
+**
+*
+
+**
+*
+**
+*

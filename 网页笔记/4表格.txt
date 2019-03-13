@@ -1,0 +1,97 @@
+第四单元 表格布局
+
+表格：<table></table> (数据查看，整合多行多列数据)
+
+<table>
+   <tr>
+      <td></td>
+   </tr>
+</table>
+
+tr 代表是行
+td 代表是列或者单元格
+
+table的属性：border边框、width宽度、height高度、bgcolor背景颜色、background背景图、bordercolor边框颜色、align对齐方式（值：left默认值、center、right）
+	    cellpadding边距（注释：内容与边框之间的距离）默认的距离是2像素
+
+	    cellspacing间距（注释：单元格与单元格之间，边框与边框之间的距离）默认的距离是2像素
+
+单元格td的属性：
+colspan水平合并单元格 （合并多列）
+rowspan垂直合并单元格 （合并多行）
+align水平对齐方式（left、right、center、justify两端） 默认值：left
+valign垂直对齐方式（top、middle、bottom、baseline基准线,）默认值：middle
+
+
+
+<th></th>表头单元格，自动加粗，自动居中（单元格）
+
+html5中新增的标签
+<thead></thead>表头(一个页面只能出现一次)
+<tfoot></tfoot>表尾(一个页面只能出现一次)
+<tbody></tbody>表体(表格主体)(一个页面可以出现多次)
+
+
+1像素细线表格制作：
+一、设置table标签背景颜色为边框的颜色
+二、设置单元格背景颜色为白色
+三、设置单元格与单元格之间的距离(cellspacing)为1
+(注意：table标签不能有border(边框属性))border=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

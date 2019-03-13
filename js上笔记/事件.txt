@@ -1,0 +1,20 @@
+给按钮绑定事件
+
+	DOM名.on（“事件名”）=function(){
+		var newStr="";
+		for(var i=0;i<=4;i++){
+			newStr+=str[随机值]
+			}
+		span.innerHTML=newStr
+		}
+
+dom元素.innerHTML 设置或获取节点中 文本或标签 的内容
+innerText  设置或获取节点中文本的内容
+**
+*
+*
+*
+*
+*
+*
+*

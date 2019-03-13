@@ -1,0 +1,34 @@
+touches
+
+targetouches
+
+changedTouches
+
+
+触摸事件解决300毫秒延迟；
+
+	高级单例模式   对象 函数  闭包
+
+	var   touches=(function(){
+		//150ms之内 轻触
+		
+		var isMove=false,
+		    startime=0;
+		function tab(e,callback){
+			e.addEventListener("touchstart",function(){
+				startime=new Date()*1
+			})
+
+			e.addEventListener("touchmove",function(){
+				isMove=true;
+			})
+			e.addEventListener("touchend",function(){
+				if(new Date()*1-startTime<150&& !isMove){      
+					callback && callback()
+				}
+			})
+		}		
+		return {
+			tap:tab
+		}
+	}()

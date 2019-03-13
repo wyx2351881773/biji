@@ -1,0 +1,36 @@
+display(元素转换)与overflow(溢出)属性的应用
+
+inherit继承，（每个属性都有这个值）
+
+overflow、display、visibility（元素可见性）
+
+1、overflow 溢出
+值：   auto      自动（能够自动检测内容的溢出与否，溢出则显示滚动条，不溢出则不显示滚动条）
+       hidden    隐藏（隐藏溢出的部分内容）
+       scroll    溢出显示滚动条（注意：不管内容溢出与否，都显示滚动条）
+       visible   溢出可见，默认值
+	
+属性：overflow-x   X轴溢出（横向）
+属性：overflow-y   Y轴溢出 (纵向)
+
+
+2、display  元素转换
+
+   值：inline   转换成行内元素（内联元素）
+		行内特点：在一行之内显示，不能自动换行，不支持宽高，宽高（不支持margin-top和margin-bottom）跟随内容的变化而变化
+
+       block    转换成块元素 
+		块元素特点：独占一行，能自动换行，支持所有的css属性
+
+       inline-block   行内块元素(默认行内块元素:img input select textarea)
+		      行内块特点：在一行之内显示的块元素
+
+       none 隐藏整个元素（隐藏元素本身），且不占位
+
+
+3、 visibility  元素可见性
+
+值：  hidden   隐藏整个元素（隐藏元素本身），且占位
+      visible  元素可见（默认值）
+
+      collapse  隐藏表格中的行或者列(占位)

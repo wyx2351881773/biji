@@ -1,0 +1,4 @@
+break和continue 的区别
+	1）break可以在switch和循环中可以单独使用
+	2）continue只能在循环中使用 跳过本次循环，继续执行下一次循环
+	

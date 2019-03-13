@@ -1,0 +1,18 @@
+//url 操作整条地址
+const url=require("url");//掌握2种方法 1）format
+const address="http://localhost:9090/a.html?name=zhangsan&age=20"
+//url.parse 分割地址路径
+const obj=url.parse(address,true);//加true 把query转为对象
+// console.log(obj)
+const str=url.format(obj)//把对象转为字符串；
+
+console.log(str)
+
+
+
+
+
+post 以流传播  	xx.on("data"，function（){}）
+		
+		end方法会等待 数据传送完毕触发；
+		xx.on("end",function(){})

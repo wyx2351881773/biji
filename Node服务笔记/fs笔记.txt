@@ -1,0 +1,49 @@
+fs
+	fs中每个方法都有同步一步两种形势
+	同步方法以Sync结尾，没有回调函数
+	异步方法最后一个参数是回调函数
+	
+	所有异步方法没有返回值，同步不一定；
+
+1)读取文件
+	异步----
+	fs.readFile（“文件路径”，[opt/str],function(err,data){
+		//ck是读取完成之后执行的回调函数
+		//如果读取成功 则 err返回null 
+		console.log(err)
+
+		抛出错误的方法
+		1）return err
+		2) throw err
+	}）
+	
+	fs.readFile（“文件路径”，{encoding:"utf-8",flag:"w+"},function(err,data){
+		//设置flag：“w+”
+		存在文件 则覆盖 没有则创建
+	}）
+	
+
+	同步----
+	fs.readFileSync("文件路径不可以省略后缀"，)
+	
+
+2)创建文件，覆盖式写入  如果不需要覆盖 则设置{flag：“a+”}改为追加；
+	fs.writeFile（“文件路径”，“文件内容”,[opt/str],function(){}）
+
+3)追加写入
+	fs.appendFile("文件路径"，“文件内容”)；
+
+操作文件夹
+
+1)读取文件夹
+	fs.readdir()
+	
+2)创建文件夹  使用时需要先查看是否存在文件夹
+	fs.mkdir()
+
+
+查看 文件夹/文件 是否存在
+	fs.existsSync("文件路径")  返回值为布尔值
+
+查看 文件夹/文件 信息
+	fs.stat()

@@ -1,0 +1,140 @@
+事件：
+	DOM 0级事件的处理；
+
+
+	事件处理程序（事件绑定）
+		1、HTML事件处理程序
+			将事件写入元素标签内；
+			缺点：HTML和JS关联性太强
+
+		2、DOM 0级事件处理程序	
+			每个事件只能绑定一个函数；
+
+		3、DOM 2级事件处理程序
+			标准浏览器：*.addEventListener（“事件”，函数名，false）
+				可以绑定多个函数；
+				三个参数 1.事件类型；
+					 2.绑定的函数；
+					 3.是否捕获阶段执行函数，默认值为（false），第三个值可以省略；
+			非标准浏览器：*.attachEvent("on事件"，函数名)；
+			
+			兼容所有浏览器写法：使用if语句；
+				if（*.addEventListener）{
+					*.addEventListener("事件"，函数名，false)；
+				}else if（*.attachEvebt）{
+					*.attachEvent("on事件"，函数名)；
+				}else{
+					*.on事件=函数名；
+				}
+		事件流专业用语：冒泡或捕获；
+			冒泡：最具体的元素先接收事件，然后依次往外传递，一直传递到document;
+			捕获：最不具体的元素先接收事件，然后依次往里传递，一直传递到最具体的元素；
+			
+			dom0级和html事件处理方式只有冒泡；
+			dom2级有冒泡和捕获；false冒泡；true捕获；	
+				attachEvent（没有捕获）
+		
+		封装兼容器
+			function fn(name,type,fn){
+				if(name.addEventListener){
+					name.addEventListener(type,fn,false);
+				}else if(name.attachEvent){
+					name.attachEvent("no"+type,fn);
+				}else{
+					name["on"+type]=fn;
+				}
+			}
+			fn(对象名，事件类型，函数名)；
+		移出事件删除事件：
+
+			addEventListener 的取消事件  removeEventLister 参数保持一致；
+			attachEvent  的取消事件  detachEvent 参数保持一致
+			
+			function fn(name,type,fn){
+				if(removeEventListener){
+					name.removeEventListener(type,fn);
+				}else if(detachEvent){
+					name.detachEvent（"on"+type,fn）;				
+				}else{
+					name["on"+type]=fn;
+				}
+			};
+			fn(对象名，事件类型，函数名);
+
+			function fn(对象名,事件,函数名){
+				if(removeEventListener){
+					对象名.removeEventListener(事件,函数名);
+				}else if(detachEvent){
+					name.detachEvent（"on"+事件,函数名）;				
+				}else{
+					name["on"+事件]=函数名;
+				}
+			};
+
+
+		阻止冒泡，切断关联：
+			事件对象：把与事件相关的一些信息保存到一个对象里面，这个对象就是事件对象；
+			*.事件=function（e）{
+				console.log(e);第一个参数默认是事件对象，不支持低版本浏览器；
+				console.log(window.event);兼容低版本方法；
+
+ 				ev.stopPropagation()；住址冒泡；
+				ev.cancelBubble=true;兼容低版本；
+
+			     var ev= e || window.event;  一般兼容写法
+				if(ev.stopPropagation){
+					ev.stopPropagation();
+				}else{
+					ev.cancelBubble=true;
+				}
+			}
+		阻止默认事件：
+			*.事件=function（e）{
+				console.log(e);第一个参数默认是事件对象，不支持低版本浏览器；
+				console.log(window.event);兼容低版本方法；
+
+ 				ev.preventDefault()；阻止默认事件；
+				ev.returnValue=false;兼容低版本；
+
+			     var ev= e || window.event;  一般兼容写法；
+				if(ev.prenvetDefault){
+					ev.prenvetDefault();
+				}else{
+					ev.returnValue=false;
+				}
+			}
+			
+			
+
+		
+	
+总结：
+	重点单词掌握：
+		*.addEventListener（“事件”，函数名，false）；
+		*.removeEventLister（“事件”，函数名，false）；
+
+		*.attachEvent("on事件"，函数名)；
+		*.detachEvent("on事件"，函数名)；
+
+		*.stopPropagation()     -----阻止冒泡；
+		*.cancelBubble=true;    兼容低版本
+
+		*.preventDefault（）；	-----阻止默认；
+		*.returnValue=false;	兼容低版本
+
+
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+
+				
+					
+
+		

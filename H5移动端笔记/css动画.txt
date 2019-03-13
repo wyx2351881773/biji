@@ -1,0 +1,101 @@
+transfrom 变形
+	
+	transfrom:rotate()  	旋转   	单位 deg  X 水平轴  Y 纵轴   Z 平面
+	
+	transfrom:scale()   	放大    	     无
+	
+	transfrom:translate() 	偏移   	     px
+	 
+	transfrom:skew()	变形	     deg
+
+
+transition 过度
+	transition:  属性名  过度时间  延时时间  执行快慢（linear/ease-in/ease-out/ease-in-out）
+		transition-propotype
+
+	属性分类
+		transition-delay:		用来设置动画开始的时间，延时调用
+	
+		transition-origin:		用来设置变形原点的位置
+
+
+
+
+animation 动画
+	
+	分为8个属性；
+	
+	animation: loadl  2s  2s   执行次数（infinite）；
+		   名称	 时间 延迟   	      死循环
+	
+
+	
+	@keyframes  name{
+
+		从0%到100%
+			form{
+	
+			}
+			to{
+	
+			}
+
+		我们也可以使用百分比   00%
+			0%{}
+			50%{}
+			100%{}
+
+	}
+
+	属性分类 
+	
+		animation-duration:    		用来设置执行时长的
+			值： 填写数字单位秒
+		
+		animation-delay:		设置播放的开始时间，延时调用	
+	
+			值： 填写数字单位秒
+		
+		animation-iteration-count:	用来设置动画播放次数的  值包涵：
+			
+   			默认：infinite无限循环
+			
+			其它次数 值 直接填写数字	
+
+		animation-fill-mode:		设置动画结束后最后一帧动画,动画时间之外， 值包涵：forwards停留在最后一帧；
+			
+			默认： 
+			forwards 停留在最后一帧
+
+		animation-timing-function:	定义动画的曲线 
+			
+			linear 		匀速
+			ease-in		慢到快
+			ase-out		快到慢
+			ease-in-out	慢到快到慢
+
+		animation-play-state:		设定动画运动或者停止
+
+			默认：
+			paused 停止		
+
+		animation-name:  		动画名  
+
+			值为 @keyframes 创建的动画名称；			
+
+		animation-direction:		在每一周期逆向播放
+			
+			默认：normal  不进行滚动
+			alternate     来回滚动
+
+		
+ 
+
+
+*
+*
+*
+*
+*
+*
+*

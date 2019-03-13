@@ -1,0 +1,88 @@
+第八单元 盒模型
+
+盒模型属性：
+
+content 内容（width  height） 
+padding 内填充、内边距
+margin  外边距
+border  边框
+
+盒模型分为4部分或5个属性
+
+
+
+
+padding内填充（内补丁、内边距）：(内容与边框之间的距离)(不可以设置负值)
+padding-left：左填充
+padding-right：右填充
+padding-top：上填充
+padding-bottom：下填充
+
+padding(复合属性)
+padding：10px  20px  30px  40px（上12  右3   下 6  左9）顺时针
+padding：10px  20px  30px（上  左右   下）
+padding：10px  20px（上下  左右）
+padding：10px（上下左右）
+
+
+padding对元素宽高的影响:
+       盒子的实际宽=width+padding-left+padding-right
+       盒子的实际高=height+padding-top+padding-bottom      
+
+margin外边距：(标签与标签之间的距离，边框与边框之间的距离)（可以设置负值）
+margin-left：左外边距
+margin-right：右外边距
+margin-top：上外边距
+margin-bottom：下外边距
+
+margin(复合属性)
+margin：10px  20px  30px  40px（上12  右3   下 6  左9）顺时针
+margin：10px  20px  30px（上  左右   下）
+margin：10px  20px（上下  左右）
+margin：10px（上下左右）
+
+border边框：（必须同时三个属性存在才能显示）
+border-color边框颜色
+border-width边框宽度（边框的粗细）
+border-style边框样式（solid实线、dotted点线、dashed虚线、none无）
+
+复合属性：border：red  10px  solid
+
+左边框：border-left:red  10px  solid
+右边框：border-right:red  10px  solid
+上边框：border-top:red  10px  solid
+下边框：border-bottom:red  10px  solid
+
+
+
+border对元素宽高的影响:
+       盒子的实际宽=width+border-left+border-right
+       盒子的实际高=height+border-top+border-bottom   
+
+
+
+(注意：行内元素不可控width,height,margin-top,margin-bottom
+       块元素：任何属性都支持
+)
+
+
+
+
+
+
+
+浮动：float   （float:left;）
+
+值：left、right、none（默认值）
+
+清除浮动：clear  ()
+
+值：left、right、none、both全部
+
+
+.box1,.box2,.box3{ width:200px}   box1和box2和box3都有相同的宽度是200px
+
+
+
+
+

@@ -1,0 +1,22 @@
+jQuery.插件
+
+	对象级别插件   this指向当前调用 的 JQ 对象（实例对象）
+		$.fn.方法名=fn；==》jquery.prototypr.方法=Fn;
+		
+		在jquery原型上扩展一个方法
+		
+		单个方法
+			$.fn.方法名=function(){}
+
+
+		多个方法    extend扩展对象
+			$.fn.extend={
+				方法1:function(){},
+				方法2:function(){},
+				......
+			}
+		
+
+
+	
+	类级别插件

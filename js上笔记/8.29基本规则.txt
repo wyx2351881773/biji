@@ -1,0 +1,66 @@
+JS组成部分：
+	三部分： DOM  BOM  ECMAsrpipt
+		1、DOM：document object model 文档对象模型
+		2、BOM：broswer object model 浏览器对象模型
+		3、ECMAscrprit： 核心  简称ES5
+
+	js起源  javascript原创：布兰登艾奇  是一门：面向对象的语言  脚本语言
+
+
+	js作用：可以和页面做交互
+	
+
+--------------------------------
+	js
+		var 定义变量
+			var 具有可以使变量声明提升的作用  （变量不等于变量值）；
+			var 变量名=变量值；js是弱类型语言 变量的类型取决于变量的值，默认情况下变量是没有值的；
+				例如：
+					var a=12,b="abc",c=null,dundefinef,e=true;  
+					五种基本数据类型
+						1、数值 	number  整形、浮点型统称为number{整数（+ -）、余数（小数点）、}
+						2、字符串 string  被一对单引号或双引号包涵的内容必须成对出现
+						3、空类型 null 	 空指对象 它是一种特殊的对象（对象占位符）唯一性
+						4、未定义类型 undefined 如果定义了变量没有赋值则默认保存undefined
+						5、布尔类型 boolean   使用频率最好 只有两个值 ：true（真）false（假）
+						6、object类型
+
+		typeof（被检测的内容） typeof 被检测的内容：两种结构  括号内或空格
+			写法： console.log（typeof 132）；  number
+				console.log（typeof（字符串））string
+
+			读取方式从右往左；
+				例如：
+				console.log（typeof typeof 123）打印结果是string
+	js严格区分大小写
+		var sum，Sum，SUM；在内存中站着不同的内存
+		
+		标示符：变量名函数名对象名
+		标示符的命名规范：
+			1、必须有字母、数字、下划线和$组成
+			2、必须以字母或下划线或者$开头
+			3、不能使用关键字和保留字
+			4、使用驼峰命名法  例如：（复合单词 backgroundColor 除第一个单词外之后的首字母必须大写）
+			5、语义化 见名识意
+			6、匈牙利命名法 例如：（var Nsum=1；）在sum前添加类型number的首字母N
+
+	Javascript分为 单行//注释 跟 多行/**/注释	
+
+
+
+	var num=8,num1=10;
+		console.log(num) 输出的结果是 8       输出的是num的属性值，
+		console.log(typeof num)输出的结果是number    输出的是num的属性值的类型				      
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*

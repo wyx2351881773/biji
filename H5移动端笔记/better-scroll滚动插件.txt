@@ -1,0 +1,20 @@
+https://unpkg.com/better-scroll/dist/bscroll.min.js  
+
+better-scroll 基于iscroll的基础扩展了一些feature
+
+	      不依赖任何框架，纯JS原生书写；
+
+		better-scroll只处理 父盒子中第一个子元素；
+
+	注意事项：
+		1）必须包含两个大的DIV 内层和外层
+		2）外层必须设置宽高;
+		3）外层需要设置overflow:hidden;
+		4）外层DIV，包裹整个可以滚动的部分
+		5）内层DIV高度一定大于外层DIV的宽高，方能滚动；
+
+事件 on(type,fn,context);
+
+实例.refresh 调用完成后
+
+scrollTo(x,y,time,easing);

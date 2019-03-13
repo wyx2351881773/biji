@@ -1,0 +1,118 @@
+HTML（网页）基础
+
+网页：是网站中的任何一个页面，通常扩展名为 .html或者是 .htm
+网页分为两种：
+1、静态页面：.html  .htm
+2、动态页面：.asp   .jsp  .php
+
+网站：是由多个网页组成的
+
+网页、文件夹、图片、命名规范：英文字母(a到z)、数字、下划线(_)都可以（注意：且不以数字开头，不能是汉字）
+
+HTML（HyperText  Markup  Language，超文本标记语言）是用来描述网页的一种语言 ：
+
+ps---Photoshop修图工具，不能用来编辑网页
+
+DW---Dreamweaver，编辑网页，记事本 , Notepad++  
+
+ps快捷键：
+
+ctrl+o 打开文件
+ctrl+n 新建文件
+ctrl+w 关闭
+ctrl+s保存  
+ctrl+c复制   
+ctrl+v粘贴
+ctrl+x剪切   
+ctrl+t自由变换  
+
+撤销错误操作：ctrl+z  （只能撤销一个步骤）
+撤销多步错误操作：ctrl+alt+z
+还原撤销操作:ctrl+shift+z
+
+空格  临时抓手    
+ctrl+D取消选区  
+
+
+
+ 
+ctrl+shift+alt+s 保存切片 
+
+
+ctrl+r显示隐藏标尺
+ctrl++放大   
+ctrl+-缩小   
+F8 显示隐藏“信息”面板
+tab   显示隐藏工具栏和浮动窗口
+
+吸管工具：吸取颜色  （按D键还原默认）
+
+
+网页所支持的图片格式：
+
+GIF：支持动画、最多只支持256种颜色、支持透明  （name.gif）
+jpg(jpeg)：色彩丰富，支持上千万种颜色，文件量小（最常用）    (name.jpg)
+png：高保真度，无损压缩，文件量大、支持透明 (name.png)
+
+
+
+DW   
+
+W3C标准、万维网联盟（不是一个标准，而是由一系列标准组成的） 
+
+1、  结构标准    .html   .htm  div
+2、  表现标准、样式标准   .css
+3、  行为标准   JavaScript  .js
+
+
+站点建立
+
+html   存放子页面
+css    存放样式表文件 style.css(样式表)
+images 存放图像
+
+index.html(最常用的)或default.html (默认的首页)
+
+
+这些文件夹都是不带后缀名的，带后缀名的都是文件
+
+建立站点两种方式：基本、高级（推荐使用）
+
+站点包含的文件和文件夹（html(栏目页)、css（样式表）、images（图片）、index.html(或者default.html)（存放在根目录下））
+
+
+
+
+网页的基本结构:
+<!Doctype html>  声明文档类型(html5) 顶行 可告知浏览器文档使用哪种HTML或XHTML规范
+<html>
+   <head>网页中不可见的元素
+    <meta  charset="utf-8"  keywords="关键词">语言编码（语言声明） （Utf-8“国际通用字符编码”）（ Gb-2312“简体中文”国标）
+    <title>1509A班级</title>
+    <style></style>
+    <link>
+  </head>
+   <body>网页中可见的元素</body>
+</html>
+
+网页中常见的文字大小：12px和14px  px代表像素
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

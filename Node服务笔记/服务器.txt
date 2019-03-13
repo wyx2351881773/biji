@@ -1,0 +1,42 @@
+const http = require("http");
+const fs = require("fs");
+//创建服务  两个参数 request,response
+//callback：什么时候执行，当客户端发起请求的时候；
+//callback：的功能，接收请求，处理请求，做出相应；
+//callback：的执行次数和请求次数有关；
+http.createServer(function (request, response) {
+    //request请求
+    //request.url = 路径+？+参数
+    //返回值 都以/开头
+    console.log(request.url)
+
+    //request.method 返回值  GET
+
+
+    //response响应
+    const html = fs.readFileSync("../index.html");
+    //response.end 结束响应 返回数据
+    response.end(html);
+    //response.statusCode=200//设置状态吗  默认200
+    //200 成功
+    //302 读取缓存
+    //304 重定向 重新指向方向
+    //400 Bad request 请求方式有问题
+    //403 Forbiddon 禁止访问
+    //404 NotForund 未找到
+    //500 服务器异常
+
+
+    //设置相应内容
+    response.write("www");
+    response.end();//结束响应 必须配置；
+
+    //必须有listen 表示监听，设置端口号
+}).listen(9090);
+
+http.createServer(function (request, response) {
+    console.log(request.url)
+
+    const html = fs.readFileSync("./index.html");
+    response.end(html)
+}).listen(8080)

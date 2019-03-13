@@ -1,0 +1,15 @@
+dom=文件域
+
+dom.onchange=function(){
+	var file=this.files //获取上传文件信息
+
+	if(/^image\//.test(filet[0].type)){
+
+		var imgtitle=new FileReader()
+		imgtitle.readAsDataURL(filet[0]);
+
+		imgtitle.onlocad=function(){
+			var result=this.result;//获取上传文件链接
+		}
+	}	
+}

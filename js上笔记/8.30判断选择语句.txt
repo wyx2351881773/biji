@@ -1,0 +1,87 @@
+选择语句分为两种  if或switch
+	if语句  选择结构（分支机构）的一种
+	if语句有三种形态
+		1)单分支	  片段小口号里的内容结果是否成立，成立则执行大括号中的内容，不成立则什么都不做
+			当大括号中的内容只有一条时可以省略大括号；
+			if（判断条件）{
+				代码块
+				}
+			var score=95;
+			if(score>=90){
+				alert('成才了')
+				}
+		2）双分支 判断if后小括号中的内容是否成立，如果成立则执行if后大括号中的内容，如果不成立则执行else中的内容
+			if(判断条件){
+				代码块
+				}
+			   else{
+				代码块
+				}
+		var age=prompt("输入你的年龄",'输入值')；
+			if（age>=18）{
+				alert(“成年”)
+			}
+			else{
+				alert（“未成年”）
+			}
+
+		3)多分支 三条及三条以上
+		var scone=prompt("输入你的分数")
+			if(){}
+			else if(){}		
+			else if(){}
+			else if(){}
+			else{}
+	if语句的嵌套
+		if(){
+			if(){}
+			else if(){}
+			else{}
+			}
+		else{}
+
+
+标签：
+	alert("系统弹出框")；系统弹出框
+	var x=confirm(“确定吗？”)；系统确认框 点确认返回true  点取消返回false
+	console.log（x）
+	
+	系统输入框
+	var x=prompt（“提示语句”，“输入文本提示框”）
+
+
+
+switch语句 是选择结构中的一种
+	
+	switch小括号中和case后可以是任意类型的内容
+	switch会用switch后小括号中的值跟每个case后的值进行全等比较，如果全等那么执行case后的代码块
+	执行语句中,没有遇到break 则会一直往下执行 直到遇到break 如果一支没有遇到 break 则会将switch语句执行完毕 
+	break:立即结束switch的执行（可以选择结束位置）
+	default:缺省值（可选的）
+	case 和default的位置 不会影响执行效果
+	多个case 可以执行 同一条语句
+	
+	
+	语法结构：	
+		switch（）{
+			case
+			}
+		
+
+	if和switch 可以互相转换
+	if和switch的区别
+		1）当分支在三条以内时使用if语句
+		   当分支在四条以上时使用switch语句
+		
+			
+		
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*

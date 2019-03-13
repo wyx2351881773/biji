@@ -1,0 +1,35 @@
+meat 属性介绍
+	
+	1）viewport       获取视口宽度
+	2）device-width   设备宽度
+	3）initial-scale  初始化缩放比例
+	4）minmun-scale   最小缩放比例
+	5）maxmun-scale	  最大缩放比例
+	6）user-scalable=no   禁止用户缩放
+		默认值是yes   开启状态
+	
+
+解决1px边框
+
+	android 设备
+		border-image
+		渐变
+		伪类
+	
+	ios     设备
+		transform:scale(0.5)
+		transform-origin:top left;
+	
+
+iconfont  字体图标  分为2个；
+
+	1）阿里巴巴图标库
+		
+			
+	2）Font awesome	
+
+	@font-face 定义字体
+	
+	兼容四大字体格式
+	.ttf .woff .eot .svg 
+		

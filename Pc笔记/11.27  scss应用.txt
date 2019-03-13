@@ -1,0 +1,20 @@
+scss 是一个 预编译器；用来编译css
+	
+	scss: 
+		1：嵌套
+		2：变量   使用$开头+name名字
+	
+		混合宏  @mixin name(){}--------@include name 
+
+		占位继承 使用% 开头+ name名字 -------@extend %name
+		
+		函数  @function name(){ @return}
+
+		循环 @for $i from 1 through 6{}   循环从1到6
+
+	for (var i  in obj) {
+		if(obj.hasOwnProperty(key)) {
+			
+		}
+	}
+

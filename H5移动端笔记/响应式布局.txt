@@ -1,0 +1,46 @@
+navigator
+
+手机像素
+	
+	逻辑像素    设计稿在PS内测量的像素
+	物理像素    设备在出厂设置的像素
+	
+	设备像素比  dpr  -----> 全称 devicePixeRatio
+
+	
+手机视口
+	
+	理想视口	 
+
+	布局视口  浏览器默认视口 980px  
+
+	视觉视口  
+		
+响应式布局
+	
+	@media screen and (max-width:414px){
+		
+	}
+	@media screen and (min-width:768px) and (max-width:1200){
+	}
+
+响应式框架
+
+	
+
+响应式字体 
+	相对单位  
+		rem 相对于根元素或者HTML的字体大小
+
+		em  相对于父元素的字体大小
+	
+		
+
+
+
+*
+*
+*
+*
+*
+*

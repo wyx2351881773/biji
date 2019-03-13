@@ -1,0 +1,80 @@
+下载
+	
+	npm i 包
+	npm i bao --save /-s
+
+
+	当输入npm i 命令时，npm会有检查本地package.json文件，如果package.json
+	中设置于依赖（不管德普还是devdep），nmp都会将依赖模块下到本地，反之
+	如果n_m中有 包，p.j中却没有设置依赖，npm会将它移出；
+
+	npm root  查看路径
+	npm install  读取package.json 并加载依赖包；
+	npm install 包名  下载 （简写：npm i 包名）
+	npm uninstall 包名 卸载
+
+	npm i 包名 --global 下载到全局（简写：npm i 包名 -g）
+	加-g参数只能保证包下载到 npm root -g所指向的路径中，要想被全局访问
+	则必须配置 NODE_PATH环境中；
+	npm root -g 查看全局路径
+	npm uninstall requery -g 卸载全局路径包
+	
+	
+	npm config list 查npm默认配置（简写：nm config ls）	
+	
+	查看
+	npm config get cache		//获取查看缓存路径
+	npm config get prefix		//获取查看包路径
+	
+	更改
+	npm config set cache "路径"  	//更改缓存路径
+	npm config set prefix "路径"	//更改包路径
+	
+	npm config get  registry     	//获取包源地址
+	
+	
+
+	require查找机制：从当前目录（命令执行的位置）逐级向上查找，直至磁盘的根目录
+	如果还没找到，则访问NODE_PATH环境变量，NODE_PATH会将一串路径（全局路径）
+	返回给系统，系统再顺着路径查找；
+
+	当require发现参数指向一个目录，实则加载的是这一目录下的某一个js文件，
+	则该文件称之为入口文件；
+
+配置入口文件
+	1）通过包内的package.json，指定main字段
+	2）通过index.js作为入口文件
+
+创建模块
+	1）创建node_modules文件夹
+	2）创建模块文件夹并存放于node_modules文件件下
+	3）必须配置package.json文件 
+	4）创建入口文件并配置到main 字段内；如果没有设置main 默认指向index文件  main字段优先级大于默认
+	5）必须提供接口（使用：module.exports 抛出）
+
+依赖包
+"dependencies": {
+    "els": "0.1.0-alpha"，下载指定版本号
+     "els":"*"自动下载最稳定版本
+  }
+
+
+数据格式
+	xx=oo&aa=bb   序列化字符串
+	{xx:oo,aa:bb} 反序列化对象
+	{"xx":"oo","aa":"bb"} JSON格式的对象
+	‘{"xx":"oo","aa":"bb"}’JSON格式的字符串
+
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*

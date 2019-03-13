@@ -1,0 +1,55 @@
+commonjs 是nodejs的规范  nodejs是commonjs的实现
+模块化规范
+客户端 AMD require CMD  sea.js
+服务端 commonjs 不是一个js文件
+
+
+?概述
+?有多人协助或者大量的js文件批量引入一个页面时，很容易产生变量名冲突被覆盖掉或者方法被重写，特别是当有一些依赖关系的时候，页面特别容易出错，这是因为js天生就缺少一种模块管理机制来隔离实现不同功能的js片段。
+?介绍
+?commonjs是一种规范 因为js没有模块的功能所以CommonJS应运而生，它希望js可以在任何地方运行，不只是浏览器中
+?NodeJS是commonjs规范的实现
+?Node程序由许多个模块组成，每个模块就是一个文件。Node模块采用了CommonJS规范
+?根据CommonJS规范，一个单独的文件就是一个模块。每一个模块都是一个单独的作用域，也就是说，在一个文件定义的变量（还包括函数和类），都是私有的，对其他文件是不可见的。
+?(function (require, exports, module) {
+?所有变量都包在匿名函数里，所以不会污染全局变量
+?
+?require:
+?1. require命令是CommonJS规范之中，用来加载其他模块的命令。
+?2. require命令的基本功能是，读入并执行一个JavaScript文件，然后返回该模块的module.exports对象。如果没有发现指定模块，会报错。
+?如果指定的模块文件没有发现，Node会尝试为文件名添加.js、.json、.node后缀，再去搜索。
+?3. 根据参数的不同格式，require命令去不同路径寻找模块文件。
+?如果参数字符串以“/”开头，则表示加载的是一个位于绝对路径的模块文件
+?如果参数字符串以“./”开头，则表示加载的是一个位于相对路径（跟当前执行脚本的位置相比）的模块文件。
+?如果参数字符串不以“./“或”/“开头，则表示加载的是一个默认提供的核心模块（位于Node的系统安装目录中-> 内置），或者一个位于各级node_modules目录的已安装模块->第三包（全局安装或局部安装）。
+?4.require发现参数字符串指向一个目录以后，会自动查看该目录的package.json文件，然后加载main字段指定的入口文件。如果package.json文件没有main字段，则会加载该目录下的index.js文件作为入口文件
+?module:
+?1. 每个模块内部，都有一个module对象，代表当前模块。
+?2.Node内部提供一个Module构建函数。所有模块都是Module的实例。
+?3.module属性：
+?module.id 模块的识别符，通常是带有绝对路径的模块文件名。
+?module.filename 模块的文件名，带有绝对路径。
+?module.loaded 返回一个布尔值，表示模块是否已经完成加载。
+?module.parent 返回一个对象 / null，表示调用该模块的模块。
+?module.children 返回一个数组，表示该模块要用到的其他模块。
+?module.exports 表示模块对外输出的值。
+?4.CommonJS规定，每个文件的对外接口是module.exports对象。这个对象的所有属性和方法，都可以被其他文件导入。当调用require方法引入模块时，其实是加载该模块的module.exports属性。
+?5.module.exports 初始值为一个空对象 {}。
+?exports:
+?为了方便，Node为每个模块提供一个exports变量，指向module.exports。 var e = m.e
+?module.exports和exports区别：
+?module.exports抛出当前内容形式，exports抛出对象
+?reason -> 当调用require方法引入模块时，实则引入的是当前模块的module.exports属性值，Node为每个模块提供一个exports变量，指向module.exports，如果直接给exports赋值，相当于切断了它与module.exports的联系，此时exports变量将不再指向module.exports属性。所以只能采用向exports变量中追加键值对的方式将其抛出
+?模块缓存：
+?模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果
+?require.main属性指向模块本身。
+?清除模块的缓存：
+?Object.keys(require.cache).forEach(function (file) {
+?delete require.cache[file];
+?});
+?CommonJS模块的特点如下
+?所有代码都运行在模块作用域，不会污染全局作用域。
+?模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果 require.cache
+?模块加载的顺序，按照其在代码中出现的顺序。
+?如果想在多个文件分享变量，必须定义为global对象的属性。
+

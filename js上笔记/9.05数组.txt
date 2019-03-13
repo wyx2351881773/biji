@@ -1,0 +1,241 @@
+
+//数组是什么? 在内存在占用连续内存 保存数据的集合
+//数组的创建
+	//1.
+	//var arr=[];  //数组字面量(直接量)
+
+	//2.用构造器(构造函数)创建数组
+	//var arr=new Array(5);// 构造器创建函数时 如果小括号中的值为 单个数值时 则被视为数组长度
+
+数组元素的读(获取) 写(设置)
+	var arr=['a',null,undefined];
+	//console.log(arr[0]);//'a'
+	//console.log(arr[arr.length-1]);//undefined
+
+	/*arr[10]='xyz';
+	arr[1]=123;
+	arr[100]='asdas';
+	console.log(arr.length);//101*/
+清空数组
+	//arr.length=0;
+	//console.log(arr);//[]
+
+删除数组中的最后一个元素
+	//arr.length-=1;// arr.length=arr.length-1;
+	//console.log(arr);
+
+
+	//.length 属性 
+	//var arr=[1,2,3,4,5,6,'a',null];
+	//console.log(arr.length);//8
+	  
+
+数组的遍历 
+	//var arr=['abc',345,456,'x',undefined];
+ 正序遍历数组
+	/*for(var i=0; i<arr.length; i++){
+		console.log(arr[i]);
+		 }*/
+倒叙遍历数组
+	/*for(var i=arr.length-1; i>=0 ; i--){
+		console.log(arr[i]);
+		 }*/
+
+
+
+
+	
+	//console.log(typeof arr); //' object'
+	// instanceof 检测类型
+	/*function fn(){}
+	console.log(fn instanceof Array) false */
+
+
+//转换方法 
+	//字符串转数组 ==> 字符串.split(分隔符);
+	//1.如果 小括号中 没有参数,则默认该字符串为一个数组项
+	//2.如果 小括号中 参数为空字符串 则字符串中的每个字符 都是一个数组项
+	//3.如果 小括号中 参数为 字符串中 不存在的字符 则默认该字符串为一个数组项
+	//4.如果 小括号中 参数为字符串中的某个字符 则该字符变为逗号,逗号与逗号之间如果没有
+	//内容 则默认为 空字符串,如果该字符为前置或后缀字符,则前置字符前和后缀字符后需添加空字符串
+
+
+	/*var str='abbaceattyar';
+
+	console.log(str.split());//["abbaceattyar"]
+	console.log(str.split(""));//["a", "b", "b", "a", "c", "e", "a", "t", "t", "y", "a", "r"]
+	console.log(str.split(' '));//["abbaceattyar"]
+	console.log(str.split('a'));// ["", "bb", "ce", "tty", "r"]*/
+
+
+	//var str='qqqwqrqqqq';
+	//console.log(str.split('q'));//[ '','' ,'' , 'w' , 'r' ,'' ,'' ,''  ,'']
+
+
+	/*var str='wertwwtwtw';
+	console.log(str.split('w'));
+	//[ '' , 'ert' ,  ''  , 't' , 't' , '' ]*/
+
+
+//数组转字符串   join(连接符);
+	/*var arr=['xy',123,'bcd'];
+
+	console.log(arr.join());//xy,123,bcd
+	console.log(arr.join('-'));//xy-123-bcd
+	console.log(arr.join(""));//xy123bcd*/
+
+	var arr=['xy',123,'bc'];
+//栈方法  ==>会改变原数组
+	push(添加项1,添加项2....) 在队尾添加一个或多个项,返回值为新数组长度
+	//console.log(arr.push(5,6)); //5
+	//console.log(arr); //['xy',123,'bc',5,6]
+
+	// pop()==> 在队尾删除一个项,返回值为被删除的项
+	//console.log(arr.pop());//'bc'
+	//console.log(arr);//['xy',123]
+
+
+//队方法  ==>会改变原数组
+	 unshift(添加项1,添加项2....) 在队头添加一个或多个项 返回值为 新数组长度
+	/*console.log(arr.unshift(1,'we'));//5
+	console.log(arr);//[1,'we','xy',123,'bc']*/
+	
+	// shift()==>在队头删除一个项,返回值为被删除的项
+	//console.log(arr.shift());//'xy'
+	//console.log(arr);//[123,'bc']
+
+//重排序方法 ==>会改变原数组
+	reverse() 数组翻转
+	//var arr=[4,5,2,1,3];
+	//console.log(arr.reverse());//[3, 1, 2, 5, 4]
+	//console.log(arr);//[3, 1, 2, 5, 4]
+	
+	sort() 数组排序==>默认按照 数组项的ASCII值排序 从小到大
+	/*var arr=[12,4,222,34];
+	console.log(arr.sort());
+	console.log(arr.sort(function(x,y){
+		//return x-y; //第一个参数减第二个参数 升序排序
+		return y-x;   //第二个参数减第一个参数 降序排序
+	}));*/
+
+//操作方法
+	数组.concat(拼接项1,拼接项2...) 数组拼接(拼接常量) 返回值为:拼接会的数组
+	/*var arr=[1,2],arr1=['ab','c'],arr2=['ty',null];
+	console.log(arr.concat(undefined,456)); 
+	console.log(arr)*/
+	//slice() 数组截取
+	//var arr=[4,5,1,'a',undefined];
+	//console.log(arr.slice(1,3)); //[5,1]
+
+	数组.splice(起始下标,删除个数,添加项1,添加项2...) 会改变原数组
+	//返回值为被删除项组成的数组
+	//数组的增删改方法 
+	/*var arr=[1,3,'aaa',null];  //[1,3,4,5,null]
+	console.log(arr.splice(2,3,4,5));//["aaa",null]
+	console.log(arr);//[1,3,4,5]*/
+
+
+	/*var arr=[5,4,'ab',undefined,250];
+	console.log(arr.splice(1,2,3,4)); //[4,'ab']
+	console.log(arr);//[5,3,4,undefined,250]*/
+
+	/*var arr=[23,45,11,78,'ab']; //[23,34,44,45,11,78,'ab'];
+	console.log(arr.splice(1,0,34,44));//[]
+	console.log(arr);//[23, 34, 44, 45, 11, 78, "ab"]*/
+
+	//2、使用prompt弹出输入框，要求用户输入一个英文的语句，将输入语句的第二个单词截取出来
+	/*var str=prompt("请输入一句话");
+	var arr=str.split(" ");
+	alert(arr[1]);*/
+
+	//字符串.replace(被替换项,替换项); //将 被替换项首次出现的位置 替换成 替换项
+	/*var str='hello world';
+	console.log(str.replace('o',1));
+	console.log(str)*/
+
+	/*var str='border-bottom-right'; //'borderBottomRight' 转驼峰
+	function fn(str){
+		var arr=str.split('-'); //['border','bottom','right']
+		var newStr=arr[0];
+		//从第二个数组项遍历数组
+		for(var i=1; i<arr.length;i++){
+			newStr+=arr[i].charAt(0).toUpperCase()+arr[i].slice(1);
+			 						  }
+		return newStr;
+				 }
+	console.log(fn(str));*/
+
+	/*var nums = [1,5,9,5,3,6,1,8,9,2,7,6];// 将数组中重复的值只保留一个，且做升序排列，返回[1,2,3,5,6,7,8,9]
+    function fn(nums){
+    	//定义一个新数组 用来保存不重复的值
+    	var arr=[];
+    	//循环遍历nums数组
+    	for(var i=0; i<nums.length; i++){
+    		//判断当前项是否出现在新数组中
+    		if(arr.indexOf(nums[i])==-1){
+    			//如果当前项没有出现在新数组中 则将当前项添加到新数组中
+    			arr.push(nums[i]);  
+    									}
+
+    		 							}
+    	//将数组从小到大排序后 返回
+    	return arr.sort(function(x,y){return x-y});
+    				 }
+    console.log(fn(nums)); 	 */ 
+
+    //var arrs = ["a","c",6,"e",5,3,"d"];
+     // 将arrs中所有的数字乘以5，返回[30,25,15]
+    /* var arr = ["a","c",6,"e",5,3,"d"];
+     function fn(arr){
+     	//定义新数组 用来保存乘5后的数字
+     	var newArr=[];
+     	for(var i=0; i<arr.length;i++){
+     		//判断当前项 是否是数字
+     		if(!isNaN(arr[i])){
+				newArr.push(arr[i]*5);//将当前项乘5以后 添加到新数组中
+
+     						  }
+     		 						  }
+     	return newArr;
+     			 }
+     console.log(fn(arr));*/
+
+
+
+     /*var arr=[1,'a',null,'xyz',undefined,567,'sd','ds'];
+     function fn(arr){
+     	var count=0;//定义计数器
+     	//循环遍历数组
+     	for(var i=0; i<arr.length;i++){
+     		//判断当前项是否是字符串
+     		if(typeof arr[i]=='string'){
+     			count++;
+     			}
+	     		 					  }
+	     return count;
+
+     			 }
+     console.log(fn(arr));*/
+
+
+     /*var str='abc!123bd#e5&66'; //[1][2][3]
+     function fn(str){
+     	//1.截取有效字符串
+     	//2.转数组 将字符串中的每一个字符都转为数组项
+     	var arr=str.substring(0,str.indexOf('#')).split("");
+     	//循环遍历数组
+     	for(var i=0; i<arr.length; i++){
+     		//判断当前项是否是数字
+     		if(!isNaN(arr[i])){
+     			//将当前项拼接一对'[]'
+     			arr[i]='['+arr[i]+']';
+     			}
+     		 							
+     		 							}
+     	return arr.join("")+str.slice(str.indexOf('#'));
+    	
+     	
+
+
+     			     }
+     console.log(fn(str));

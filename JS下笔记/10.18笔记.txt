@@ -1,0 +1,63 @@
+1、
+
+
+
+2、ajax跨域
+	ajax不允许跨域访问资源，如何解决跨域访问？
+	1）协议不同
+		http/https
+	2)端口不同
+		http://sina.com:8080 去访问http：//sina.com:999
+	3)域名不同
+		http://sina.com      去访问http://hao123.com
+
+
+	解决跨域
+		jsonp 解决跨域方式
+			原理：动态创建script标签，把请求地址放到script标签的src里面，并且告诉他一个回调函数的名字，
+			这个回调函数实在我们本地定义的，但是回调函数实在服务端调用
+
+	promise  es6新增的
+		es5: 用回调函数（callback）解决异步、事件监听
+		
+		promise属于构造函数、参数是函数；
+			创建promise的实例
+			实例分为三种状态：
+				1、成功 resolve
+				2、失败 reject
+				3、进行中 pending
+			var  pl=new promise（function（resolve，reject）{
+						
+					}），这两个参数表示（成功、失败）；
+				pl.then(function(message){
+					console.log("成功")
+					},function(eror){
+					console.log("error")
+					}).catch（function（）{
+						console.log("error")	
+					}）
+			promise的实例有一个then方法，该方法有两个参数，第一个参数对应的是成功，第二个参数对应的是失败的参数
+				第二个参数可以省略不写，可以写入catch里面；
+
+
+
+			var  pl=new Promise(function(resolve,reject){
+						
+					});//这两个参数表示（成功、失败）；
+				pl.then(function(message){
+					console.log("成功")
+					}).catch(function(){
+						console.log("error")	
+					});
+
+			var  p2=new Promise(function(resolve,reject){
+						
+					});//这两个参数表示（成功、失败）；
+				p2.then(function(message){
+					console.log("成功")
+					},function(eror){
+					console.log("error")
+					});
+
+
+	

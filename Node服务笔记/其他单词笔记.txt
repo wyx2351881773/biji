@@ -1,0 +1,84 @@
+字符串的扩展
+	str.includes(查找项，开始查找的下标(可选 默认从零开始查询))
+
+	str.starstsWith(查找项，开始查找的位置) 
+	查找以什么开头；
+
+	str.endsWith(查找项)	
+	查找以什么结尾 返回为布尔值
+	
+	str.stendsWith(查找项，超找长度) 
+	返回为 布尔值
+
+	str.repeat(2) 
+	重复次数  
+
+
+数组的扩展
+	
+	var arr=[1,2,3,4,5,6]
+	arr.reduce(function(pre,car){
+		console.log(pre,car)
+		//1   2
+		undefined  3
+		undefined  4
+		undefined  5
+		undefined  6
+
+	})
+
+	--------------------------------
+	copywithin（target,start,end）
+		在数组内部，将指定位置成员复制到其它位置并覆盖原有成员，
+	返回覆盖后的新数组
+		三个参数{
+			1）替换的数据，
+			2）开始读取的位置
+			3）停止读取的位置
+		}
+
+	----------------------------------
+	find
+	返回满足条件的 第一项，如果不存在则返回 undefined；
+	findIndex 
+	返回满足条件第一项的下标，如果不存在则返回-1
+
+	----------------------------------
+	fill（填充元素，填充起始位置，填充结束为止）；
+
+	----------------------------------
+	flat(扁平化处理层级数值为Number) 
+	把多维数组转为单一数组
+	
+	----------------------------------
+
+对象的扩展属性
+	Object.defineProperty(对象，属性健，{
+		value：值，
+		enumerable:true,   设置为true 变为可枚举
+		wrifable:true,	   设置为可修改
+		confihurable:true，设置为可删除
+	})
+	   用于给对象添加键值对或替换值的不可枚举方法
+		
+	
+合并对象属性
+	Object.assign({},obj...)
+
+	
+
+
+
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*

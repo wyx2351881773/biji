@@ -1,0 +1,79 @@
+json 只是一种数据格式；
+
+1、字符串、数字、boolean；
+2、数组对象；
+
+json格式的对象属性名与属性值必须是双引号；
+	有两种常用的方法
+	1、JSON.stringify（）   把任意对象转换成字符串，方便我们查看；
+	
+	2、JSON.parse（）    把JSON格式的字符串转成json格式的对象；
+	JSON.parse解析字符串的时候，字符串必须是JSON格式的对象，里面的属性必须是双引号；
+
+测试
+console.log(typeof JSON.stringify);//function
+
+
+
+eval（）系统自带的函数，参数是字符串格式，会把参数当做代码去执行；
+
+	1、eval（“（”+参数+“）”）；可以将参数转换成字符串，在进行转换的同时需要对进行转换的参数需要添加小括号
+
+
+
+ajax  异步的JavaScript和XML     XML（和json很像）；
+
+	同步：同一时间段，只有一个进程执行；
+	异步：同一时间段，有多个进程执行；
+	ajax就是用来获取数据的，使用的是局部刷新页面的功能；
+
+1、创建ajax对象；
+	var  ajax=new XMLHttpRequest（）；存在兼容不支持IE6；
+	
+	var ajax=new ActiveXObject("Microsoft.XMLHTTP");固定写法用来兼容IE6
+
+	兼容写法：
+	var ajax=null;
+	if(window.XMLHttpRequest){
+		ajax= new XMLHttpRequest();
+	}else{
+		ajax= new ActiveXObject("Microsoft.XMLHTTP");
+	}
+2、建立http连接， 设置相关的信息
+	ajax.open("get","url",true);
+	三个参数：1、method（get（GET）|post（POST））
+		 2、url 请求的地址
+		 3、是否异步true|false  默认true；
+	
+3、提交相关的设置
+	ajax.send(null); send小括号内用来传递参数，如果不进行传递则写入null即可；
+	
+
+
+ajax对象有一个属性 
+	readystate ajax的状态值
+		0 还未初始化  还没有调用open方法
+		1 已经调用open方法，还没有调用send（）；
+		2 调用了send（）
+		3 后台只是发送了一部分数据或者后台正在解析数据
+		4 已经获取了说有数据，可以进行操作；
+ajax提供了一个事件onreadystatechange,这个事件是readystate发生变化的时候会触发这个事件；
+	
+status:http
+	200表示成功  404表示没有获取到   500以上表示服务器内部错误；
+
+xhr.responseText  请求回来以后后台返回来的相应数据，这是一个字符串；
+
+
+get和post的区别
+	1、get传输的数据大小限制，最多一半不超过2kb，post没有限制；
+	2、传递参数的方式不同
+		get：直接把参数拼接到请求地址的后面http：//www.weibo.sina.com?name=zhangsan&age=20&sex=male;
+		
+		post:
+			xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+
+			xhr.send("name=lisi&age=20&tel=123456789")
+	3、get请求不安全；
+
+

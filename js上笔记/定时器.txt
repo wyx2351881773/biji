@@ -1,0 +1,14 @@
+定时器：
+	间歇调用：
+		setInterval（要执行的代码（函数），间隔时间）
+		1）setInterval(function(){ fn()},10）；
+		2）setInterval(fn,1000);
+			function fn(){};
+	清除定时器：
+		clearInerval();
+
+	超时调用：setTimeout(执行代码，间隔时间) 只执行一次
+	清除超时调用：clearTimeout
+
+
+	

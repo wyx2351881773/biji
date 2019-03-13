@@ -1,0 +1,71 @@
+
+JQ 语法
+
+添加语句
+	父级.append（追加的元素）
+	追加的元素.appendTo(父级)
+
+删除语句
+	remove
+    删除类
+	removeClass
+    追加类
+	addClass
+
+
+判断语句
+	.is(返回值是布尔)  	 啥都可以判断
+	.hasClass(返回值为布尔)   只可以判断class；
+
+ 	.is等价于.hasClass
+
+
+添加删除方法
+	.toggleClass("mingzi") 封装 添加或删除；
+循环语句  
+	.each(function（index,ele）{})
+	
+	
+
+委托事件
+
+    $(他的父级).on("事件","需要继承的子元素"，function(){执行的函数})；
+	
+设置属性值
+	元素.prop（属性，是/否）  只能设置boolean 类型的属性；
+	attr                      设置属性值不是 boolean 的属性
+	attr 可以获取  ，可以设置属性（覆盖掉原有属性）	
+	
+查找祖先  把所有祖先保存在一个数组中
+
+	元素.parents(所有祖先中的某一个祖先)；
+
+
+设置单个属性
+	元素.css（"color","red"）;
+
+设置多个属性
+	
+	元素.css({"color":"red",
+ 		"font-size":30,
+		"backgroundColor":"yellow",
+	});
+
+	元素.css（）只写一个参数时表示获取；
+
+清空内容
+	元素.empty()
+	元素.empty()  与 标签.innerHTML=""  等价;
+
+克隆
+	元素.clone（true）
+	如果为  true 表示也会克隆节点事件
+	如果为  false 表示只会克隆节点；
+
+
+*
+*
+*
+*
+*
+*

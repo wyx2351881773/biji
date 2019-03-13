@@ -1,0 +1,20 @@
+手指事件
+
+	按下 touchstart
+
+	抬起 touchend
+
+	移动 touchmove
+
+	取消/中断 toushcancel
+
+
+在移动端需要注意的三个属性
+
+	手指触发信息都存储在以下三个对象中  
+	touches  targetTouches   changedTouches
+	
+	只有changeTouches中存储了手指离开的信息
+	
+
+	

@@ -1,0 +1,88 @@
+表单：表单在网页中主要负责数据采集功能(数据交互)        标签:<form></form>（块元素）
+form的属性：  
+	name 表单的名字   
+	method提交方法（值：post(向服务器传送数据)  、 get(从服务器上获取数据)默认）
+	action提交地址(提交URL)
+	target窗口打开方式（值：_blank 新窗口打开 _self当前窗口打开）
+	title 描述表单
+
+
+输入框：<input />（可变元素）
+input的属性：
+	type类型：
+		text文本框
+		password密码框
+		radio单选框   单选框分组:name="相同"为一组
+		checkbox多选框、复选框
+                (注意：单选框和多选框选中状态属性checked="checked"，属性和值一样可以只写checked)
+
+
+
+
+
+		file文件域（没有value）
+                
+
+
+
+
+
+		按钮： button普通按钮
+		       submit提交按钮
+                       image 链接src=""  图像域按钮(提交按钮) 
+		       reset重置按钮、取消按钮
+		  （注意：value(初始值)属性可以改变按钮上显示的文字（可以刷新按钮），例如value="立即注册"）
+
+2214
+1）第一个2指的是两个框（文本框和密码框）
+2）第二个2指的是两个选择（单选和复选）
+3）一个文件域
+4）四个按钮（提交按钮、图像域按钮、重置按钮、普通按钮）
+
+
+
+
+
+
+            html5新增：
+
+		number数字（数值）  （ max="10"代表最大值是10   min="1"代表最小值是1 step="5" 间格,步长）
+		tel 电话号码  (电话包含数字和-)
+		email邮箱
+		url 网址（地址）
+		date 日期
+                search  搜索
+
+ 
+	
+	注意属性：
+	value 初始值
+	placeholder 初始值（html5新增）
+
+
+下拉菜单
+<select>
+  <option></option>
+  <option></option>
+</select>
+outline的属性：取消自带属性
+select的属性：multiple  允许多许
+              size      选中几个
+option的属性：selected  选中状态
+
+文本域<textarea></textarea>
+textarea的属性：cols列宽   rows行高
+
+
+
+
+
+
+
+
+
+
+
+
+
+

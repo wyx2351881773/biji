@@ -1,0 +1,15 @@
+数据库
+
+本地存储
+cookie   是前后端交互的一种存储方式：4KB
+
+localStorage    sessionStorage   本地存储---->
+indexedDB  webSql	
+
+
+
+session和 Cookie 存储于服务端    可以存储4KB数据
+
+WebStorage 本地存储  是属于 HTML5 新增的API
+	localStorage   永久存储
+	sessionStorag  临时存储  可以存储5MB数据

@@ -1,0 +1,20 @@
+ajax
+	ajax 是异步的javascript 和 xml  用是用来请求数据的；
+
+	$.ajax({
+		url:"url",
+		sccuss:function(接收的数据){
+			console.log(接收的数据)
+		}
+	})
+
+	$.get(“url”，function(接收的数据){console.log(接收的数据) })  三个参数
+	
+	$.post()
+	
+*
+*
+*
+*
+*
+*

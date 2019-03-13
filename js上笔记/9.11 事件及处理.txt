@@ -1,0 +1,41 @@
+HTML时间模型（内联模型）：违反了层次分离原则，出现了DOM 0级事件；
+	DOM 0级事件 让你的Html具有某些效果 触发效果后做一些操作；
+	语法结构：
+		1）节点.on+“事件名”=function（）{}
+		2）节点.on+“事件名”=function（）{
+			fn（1,2）
+			}
+		3）节点.on+“事件名”=fn；
+		function fn(){}
+
+常用事件：
+	鼠标事件：click单击 dblclick双击 mousedown按下 mouseup抬起 mouseout移出 mouseover移入 mousemove移动  
+	焦点事件：blur失去焦点 focus获取焦点
+	键盘事件：keydown按下  kevup抬起  keypress
+	UI事件：change失去焦点改变内容
+
+TagName==NodName 两种属性都可以获取标签名；
+	
+节点属性：
+	
+	firstChild  lastChild netxSibling previousSibling 四种方法存在兼容问题使用Element；
+	
+	parentNode获取父节点
+
+	children 节点中默认保存所有子元素节点的集合（伪书组）
+	childNodes 节点中默认保存所有子节点的集合（伪书组）
+属性方法：
+	getAttribute()获取属性；
+	setAttribute()设置属性；
+	removeAttribute()删除属性；
+	attributes 默认保存着节点属性的集合；
+
+创建元素和创建文本内容：
+	document.createElement("要创建的元素名")；返回值为创建的元素；
+	document.createTextNode("文本内容")返回值为 文本内容；
+追加节点：
+	父元素.appendChild("要追加的节点")；
+插入节点：
+	父元素.insertBefore(要插入的节点，要插入的位置)；
+替换节点：
+	父元素.replaceChild(新节点，被替换的节点)

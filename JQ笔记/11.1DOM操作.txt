@@ -1,0 +1,5 @@
+上移	
+	移动的元素.inserBefore(移动的位置)
+下移
+	移动的元素.inserAfter(移动的位置)
+

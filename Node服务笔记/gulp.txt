@@ -1,0 +1,38 @@
+gulp
+	1）安装 全局cls
+		本地 require
+	2）qulpfile.js   gulp默认执行文件
+	3）引入gulp require（“gulp”）
+	4）注册任务 gulp.task（任务.ck）
+	5）执行任务 命令gulp 任务名/gulp
+
+插件
+	gulp-sass
+	gulp-autoprefixer	
+	gulp-concat		合并
+	gulp-clean-css 
+
+	
+	gulp.watch(文件路径，文件改动是需要执行的任务名)
+
+	gulp.series("a","b","c")同步执行 a，b，c 等待前一个执行完毕在执行下一个
+	gulp.parallel("a","b","b") a,b,c共同执行，互不影响
+
+	js插件
+	"gulp-babel": "^7.0.0",
+    	"babel-core": "*",
+    	"babel-preset-es2015": "*",
+    	"babel-preset-env": "*"
+
+
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*

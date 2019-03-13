@@ -1,0 +1,49 @@
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+服务端存储
+	cookie    
+ 	session   服务端存储
+
+本地存储
+
+	webstorage HTML5新增的API  客户端存储
+		两种模式
+		1）localStorage   永久存储   
+		2）sessionStorage 临时存储
+
+
+替换： 	后写的覆盖先写的
+移出： 	storage.removeItem("key"); 单项移出
+	storage.clear();   	   移出全部
+	
+
+*.key()   根据下标返回属性
+
+
+
+
+
+cookie
+	设置  document.cookie="key=val";
+
+	获取  document.cookie    所有信息汇聚成字符串 并返回；
+	
+	设置有效时间     expires
+
+
+
+
+Elements  检查DOM元素
+Console   js 调试
+
+Sorces     
+
+Network   
+
+Application  存储信息
+
+
+
+
+hasOwnProperty 判断是不是对象本身的属性

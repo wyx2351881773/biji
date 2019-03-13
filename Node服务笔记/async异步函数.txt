@@ -1,0 +1,14 @@
+async用于声明函数是一个 异步函数
+	async function start(){ }
+
+
+await	
+	1）用于等待一个异步函数的执行；
+	2）必须等待Promise给出状态之后才会执行；
+
+
+async与await  用于简化Promise的then链
+
+	
+
+

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- <div id="btn" style="width:300px; height:300px; background:red"></div> -->
+	<script>
+	//arguments ==> 再函数中 保存实参的集合
+	//封装函数 返回 所有实参的平均值
+	// function fn(){
+	// 	//设置保存总和的变量
+	// 	var sum=0;
+	// 	//遍历 arguments 加所有arguments项(所有实参)累加在一起 
+	// 	for(var i=0; i<arguments.length;i++){
+	// 			sum+=arguments[i];// sum=sum+arguments[i];
+	// 		 							    }
+	// 	retun sum/arguments.length;
+	// 			 }
+	// fn(24,222,1111);
+	// fn(1,2,332,3,21);
+	// fn(66,8,898,989,8);
+
+
+	//1．编写一个名为sum的函数，功能：求任意多个数的和,计算后的结果作为函数的值返回,例如：sum(1,2) 返回结果是3     sum(3,7,2)返回结果是12
+	/*function sum(){
+		var newSum=0;
+		for(var i=0; i<arguments.length;i++){
+			newSum+=arguments[i];
+			 								}
+		return newSum;
+				  }	
+	console.log(sum(1,2));
+	console.log(sum(3,7,2));
+*/
+
+	//封装一个getDays函数，用于获取指定时间的总天数，如getDays(2018,5)返回总天数31;
+	//第一种
+	/*function getDay(year,month){
+		return new Date(year,month,0).getDate();
+					  }
+	console.log(getDays(2020,2));*/
+
+	//第二种
+	/*function getDays(year,month){
+		switch(month){
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:return 31;
+			case 4:
+			case 6:
+			case 9:
+			case 11:return 30;
+			case 2:if(year%4==0&&year%100!=0 || year%400==0)return 29;
+				   else return 28;
+					}
+					  }
+	console.log(getDays(2018,6));*/
+
+
+
+	//封装n天之后星期几
+	/*function week(date,n){
+		//将 传递过来的参数 设置为日期对象
+		var time=new Date(date);
+		//获取该 日期对象的 日期
+		var newDate=time.getDate();
+		//设置日期 该日期兑现的日期+n天
+		time.setDate(newDate+n);
+		return time.getDay();
+				  		 }
+	console.log(week('2020,12,20',20));//6
+*/
+	/*function week(date,n){
+		////将 传递过来的参数 设置为日期对象
+		var time=new Date(date);//2020,12,40
+		time.setTime(+time+24*60*60*1000*n);
+		return time.getDay();
+				   		 }
+	console.log(week('2020,12,20',20));*/
+
+//getTime valueOf 转时间戳(日期对象的毫秒形式)
+//getFullYear() 返回 当前年份
+/*		Month()          月份
+		Date()			 日期
+		Day()			 星期
+		Hours()			 小时
+		Minutes()		 分钟
+		Seconds()		 秒
+		Millisecond()	 毫秒*/
+
+
+/*var time=new Date();//设置当前时间(日期对象)
+//console.log(+time);//将当前时间转为时间戳
+time.getFullYear(2020);//返回值:设置时间 后的 时间戳
+//2020 9 6 9:11
+console.log(time);*/
+
+
+
+
+//先封装一个formatNum函数,用于将单数由小写数字转换为大写数字,例如：formatNum(1)最终返回“一”,再封装一个NumToUpper函数，通过调用formatNum这个函数，将单数或双数转为大写。例如：NumToUpper(2)返回”二”,NumToUpper(29)返回“二十九”。
+
+//封装返回单数的函数
+
+/*function one(n){
+	var arr=['零','一','二','三','四','五','六','七','八','九'];
+	return arr[n];
+			  }
+
+function two(val){
+	//判断是否是单数
+	if(val>=0 && val<=9){
+		 return one(val);
+		}
+	//判断是否是10的倍数
+	else if(val%10==0){ //'50'
+		return one(String(val).charAt(0))+'十';
+			 		  }
+	else{   
+		return one(String(val).charAt(0))+'十'+one(String(val).charAt(1));
+		}
+			 	 }
+
+console.log(two(15));*/
+
+
+//indexOf()
+
+
+
+//字符串方法 indexOf()  首次出现的字符的下标
+//lastIndexOf() 最后一次出现的字符的下标
+//slice()	 截取内容
+//substr()	 截取内容
+//substring() 截取内容
+//charAt() 通过下标查找字符
+//charCodeAt() 通过下标查找字符的ASCII码值
+//split()	字符串转数组
+//toUpperCase()	转大写
+//toLowerCase() 转小写
+//replace() 替换
+
+//数组方法 push()  新数组长度
+// pop() 	被删除项
+// unshift()  新数组长度
+// shift()	被 删除项
+//  join()	数组转字符串
+//   reverse()  翻转
+//    sort() 排序
+//slice() //数组截取
+//indexOf() lastIndexOf() 
+//splice() 增删改
+//concat() 拼接后的数组 
+ 
+
+//字符串数组方法 
+//indexOf() lastIndexOf() slice() 
+
+
+//数组中会改变原数组的方法
+/*push() pop() unshift() shift() reverse() 
+sort() splice() */
+
+//判断实参中有多少个字符串类型的值
+/*function fn(){
+		var count=0;
+		 for(var i=0; i<arguments.length;i++){
+		 		if(typeof arguments[i]=='string'){
+		 			count++;
+		 			}
+		 	 }
+		 return count;
+}
+fn(1,2,'ab');
+fn(2,3,'xy','rt');*/
+
+
+// 封装reverse()  数组翻转
+/*var arr=[5,4,3,2,1];
+function fn(arr){
+	var newArr=[];
+	//循环遍历数组 添加在新数组中
+	for(var i=0; i<arr.length; i++){
+				newArr.unshift(arr[i]);
+		}
+	/*for(var i=arr.length-1; i>=0; i--){
+				newArr.push(arr[i]);
+		}
+
+
+		    }
+fn(arr);
+*/
+
+//封装sort()方法
+/*var arr=[3,4,2,5,1];
+function fn(arr){
+	var temp;
+	//外循环控制比较轮数  轮数=元素个数-1
+	for(var i=1; i<arr.length;i++){
+		//内循环控制每轮比较的次数 次数=元素个数-当前轮数
+		for(var j=0; j<arr.length-i;j++){
+			if(arr[j]<arr[j+1]){
+				temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+				}
+
+			}
+		 
+
+		 }
+		 return arr;
+
+
+			 }
+console.log(fn(arr));*/
+
+
+
+//封装indexOf()方法 查找字符串或数组中 某个字符或元素首次出现的位置并返回其下标 如果没有则返回-1
+/*var str='qwer';
+function fn(str,val){
+	//遍历 目标 字符串
+	for(var i=0; i<str.length;i++){
+		if(val==str[i]){
+			return i;
+			}
+				}
+	return -1;	
+		}
+console.log(fn(str,'e'));*/
+
+
+
+//
+/*var timer=document.getElementById('timer');
+//提前调用函数 解决间隔时间延迟问题
+fn();
+
+function fn(){
+	var time=new Date(),
+		year=time.getFullYear(),
+		month=time.getMonth()+1,
+		day=time.getDate(),
+		hours=time.getHours(),
+		minutes=time.getMinutes(),
+		seconds=time.getSeconds();
+
+		timer.innerHTML=`${year} 年 ${month} 月 ${day} 日 ${hours} 时 ${minutes} 分 ${seconds} 秒`;
+			 }
+
+setInterval(fn,1000);*/
+
+//setInterval(被执行的函数,间隔时间ms);
+//  间歇调用 
+
+
+//倒计时
+// var timer=document.getElementById('timer');
+// function fn(date){
+// 	var time=new Date(date)-new Date();
+// 	//计算时间差 转成 天 小时 分钟 秒
+// 	var day=Math.floor(time/1000/60/60/24),
+// 		hours=Math.floor(time/1000/60/60%24),
+// 		mintues=Math.floor(time/1000/60%60),
+// 		seconds=Math.floor(time/1000%60);
+// 		timer.innerHTML=`${day} 天 ${hours} 时 ${mintues} 分 ${seconds} 秒`;
+// 				 }
+// fn('2018,9,30'); 
+
+// setInterval("fn('2018,9,30')",1000);
+
+
+//创建函数的两种方式
+/*function 函数名(){
+
+}
+
+//函数表达式
+var 函数名=function(){
+
+}*/
+
+
+
+//DOM 0级事件 
+/*var btn=document.getElementById('btn');
+/*DOM元素.on+'事件名'=function(){
+	//执行代码块
+}
+//鼠标事件  click dblclick mouseout mousevoer mousedown mouseup mousemove
+var i=1;
+btn.onclick=function(){
+	console.log(++i)
+}
+*/
+
+
+//封装 sort()  indexOf() reverse() 去重  求参数平均数 求一组数中最大或最小值  n天之后星期几 提取参数
+
+
+/*var url='www.qunar.com/#8080?cityId=01&check_in=2018-09-30&date_out=2018-10-06&name=八维国际';
+                function fn(str,val){
+                    //1.截取有效字符串
+                    //2.通过&转数组
+                    var arr=str.slice(str.indexOf('?')+1).split('&');
+                    //遍历该数组 用val和该数组中的每一项'='前
+                    //的内容做比较  如果相等 则返回该项'='后的内容
+                    for(var i=0;i<arr.length;i++){
+                        //判断是否相等
+                        if(val==arr[i].slice(0,arr[i].indexOf('='))){
+                            //返回当前项'='后的内容
+                            return arr[i].slice(arr[i].indexOf('=')+1);
+                            }
+                                                 }   
+                    
+                             }
+                console.log(fn(url,'cityId'));*/
+
+
+
+
+	</script>
+</body>
+</html>

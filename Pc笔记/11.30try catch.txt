@@ -1,0 +1,29 @@
+异常报错
+	throw new Error(); 手动抛错；
+	
+	try{
+	   // 此处发生错误 抛出错误
+	}catch(e){
+	   // 此处用接收错误 
+
+	   e  表示错误的类型
+
+	   e.message  表示错误的信息
+	}
+
+	try: 语句测试代码块的错误，一般把可能会出错的代码放到这里
+	catch： 只有try里面的代码块发生错误时，才会执行这里的代码，参数err记录着try里面代码的错误信息
+	finally：无论有无异常里面代码都会执行
+
+
+
+
+
+//常见错误
+            // EvalError        表示错误的原因：与 eval() 有关。
+            // InternalError    代表Javascript引擎内部错误的异常抛出的实例。 
+            // RangeError       数值变量或参数超出其有效范围。
+            // ReferenceError   表示错误的原因：无效引用。
+            // SyntaxError      表示错误的原因：语法错误。
+            // TypeError        表示错误的原因：变量或参数不属于有效类型。
+            // URIError　　　　 表示错误的原因：给 encodeURI()或 decodeURl()传递的参数无效
